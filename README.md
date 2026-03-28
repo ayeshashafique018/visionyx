@@ -19,24 +19,6 @@ Visionyx is a modern multi-page tech startup website built from scratch. It refl
 
 <hr>
 
-<h2>📸 Live Preview Gallery</h2>
-
-<p align="center">
-    <img src="https://image.thum.io/get/width/1000/https://visionyx.vercel.app/" width="90%" />
-</p>
-
-<p align="center">
-    <img src="https://image.thum.io/get/width/1000/https://visionyx.vercel.app/about.html" width="45%" />
-    <img src="https://image.thum.io/get/width/1000/https://visionyx.vercel.app/service.html" width="45%" />
-</p>
-
-<p align="center">
-    <img src="https://image.thum.io/get/width/1000/https://visionyx.vercel.app/contact.html" width="45%" />
-    <img src="https://image.thum.io/get/width/1000/https://visionyx.vercel.app/blog.html" width="45%" />
-</p>
-
-<hr>
-
 <h2>🌐 Pages</h2>
 <ul>
     <li>Home</li>
