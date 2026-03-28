@@ -1,4 +1,13 @@
 /* ========== NAVBAR STYLES ========== */
+:root {
+    --primary: #06A3DA;
+    --primary-light: #25E0E0;
+    --dark: #000000;
+    --dark-secondary: #061429;
+    --text-light: #FFFFFF;
+    --text-muted: #B0B8C1;
+}
+
 
 .navbar-dark .navbar-nav .nav-link {
   font-family: 'Nunito', sans-serif;
@@ -10,7 +19,32 @@
   font-weight: 600;
   transition: 0.5s;
 }
+/* Default state */
+.accordion-button {
+    color: #000 !important;
+    background-color: #fff !important;
+}
 
+/* Hover */
+.accordion-button:hover {
+    color: #000 !important;
+}
+
+/* Open (expanded) state */
+.accordion-button:not(.collapsed) {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+/* Remove Bootstrap blue shadow */
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+/* Optional: keep arrow/icon black too */
+.accordion-button::after {
+    filter: brightness(0);
+}
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #23D9DD;
@@ -640,49 +674,155 @@ button:hover, .btn:hover {
     transform: translate(50%, 50%);
 }
 
-/* Services */
+/* quote start  */
+/* Quote Section Styling */
+.quote-section {
+    background-color: #000000; /* Jet Black */
+    color: #FFFFFF; /* Primary text color */
+}
+
+/* Typography */
+.quote-section h1 {
+    color: #23D9DD; /* Accent Blue */
+}
+
+.quote-section p.lead {
+    color: #B0B0B0; /* Accent Gray */
+}
+
+/* Icon Box Styling */
+.icon-box {
+    background-color: #1C1C1C; /* Charcoal Gray */
+    padding: 12px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+/* Form Box */
+.form-box {
+    background-color: #1C1C1C; /* Charcoal Gray */
+    border: 1px solid #1C1C1C; /* Soft Border */
+    color: #FFFFFF;
+}
+
+/* Inputs & Select */
+.form-control,
+.form-select,
+textarea {
+    background-color: #000000; /* Jet Black */
+    color: #FFFFFF;
+    border: 1px solid #333333;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    border-color: #23D9DD;
+    box-shadow: none;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Placeholder text */
+.form-control::placeholder,
+textarea::placeholder {
+    color: #B0B0B0;
+}
+
+/* CTA Button */
+.cta-btn {
+    background-color: #23D9DD;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #E5E5E5; /* Platinum Silver on hover */
+    color: #000000;
+}
+
+
+/* updated services end */
+/* Left Column Items */
+.glowing-border-right {
+    border: none;
+   
+    box-shadow: 4px 0 0px rgba(0, 255, 255, 0.3);    /* Slight glow effect */
+}
+.content-box {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
 .services p {
-    padding: 10px;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .text-box {
     padding: 20px;
-    box-sizing: border-box;
 }
 
+/* Right Column */
 .content-box {
-    position: relative;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #F8F8F8; /* Ghost White */
+    background-color: #000000;
     border-radius: 8px;
-    border: 1px solid #1C1C1C; /* Soft Border */
+    padding: 25px;
+    border: 1px solid #23D9DD;
+    display: block;
 }
 
+.services-description h3 {
+    color: #23D9DD;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.services-description h5 {
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.services-description p {
+    color: #B0B0B0;
+    padding-left: 15px;
+}
+
+/* Button Styling */
 .button-container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 15px;
 }
 
 .read-more-btn {
     padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
     border: none;
-    background-color: #FFFFFF; /* Pure White */
-    color: #000000; /* Jet Black */
-    cursor: pointer;
-    text-align: center;
     border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .read-more-btn:hover {
-    background-color: #E5E5E5; /* Platinum Silver on hover */
+    background-color: #E5E5E5;
     transform: scale(1.05);
     color: #000000;
 }
 
+/* On Small Screens */
 @media (max-width: 767px) {
     .button-container {
         justify-content: center;
@@ -690,58 +830,21 @@ button:hover, .btn:hover {
 
     .read-more-btn {
         width: 100%;
-        padding: 15px;
+        padding: 12px;
     }
 }
 
-.service-row {
-    box-shadow: -4px 11px 29px -14px rgba(255, 255, 255, 0.05); /* subtle white shadow */
-}
-
-.content-box {
-    border: none !important;
-}
-
+/* Clickable Item Hover Effect */
 .clickable {
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
 .clickable:hover {
-    background-color: #E5E5E5; /* Hover contrast */
+    background-color: #23D9DD;
     color: #000000;
 }
-
-/* Typography Styling */
-.services-description p,
-.services-description h5 {
-    padding: 10px 10px 0px 30px;
-    color: #B0B0B0; /* Ash Gray for subtle text */
-}
-
-.services-description h3 {
-    padding: 30px 10px 0px 30px;
-    color: #FFFFFF; /* White heading */
-}
-
-/* Background Utilities */
-.light-blue-bg {
-    background-color: #F8F8F8; /* Replacing previous light-blue with Off-White */
-}
-
-.white-text {
-    color: #FFFFFF;
-}
-
-.white-bg {
-    background-color: #FFFFFF;
-}
-
-.black-text {
-    color: #000000;
-}
-
-/* updated services end */
 
 /* updated feature start */
 /* 
